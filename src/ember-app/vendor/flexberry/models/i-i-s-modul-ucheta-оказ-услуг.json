@@ -1,0 +1,135 @@
+﻿{
+  "name": "IISModul_uchetaОказУслуг",
+  "modelName": "i-i-s-modul-ucheta-оказ-услуг",
+  "className": "ОказУслуг",
+  "nameSpace": "IIS.Modul_ucheta",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "времяКонсульт",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "едВремени",
+      "type": "i-i-s-modul-ucheta-ед-времени",
+      "flexberryType": "ЕдВремени",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "договор",
+      "relatedTo": "i-i-s-modul-ucheta-договор",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "услуги",
+      "relatedTo": "i-i-s-modul-ucheta-услуги",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "расчетОстВрем",
+      "relatedTo": "i-i-s-modul-ucheta-расчет-ост-врем",
+      "inverse": "оказУслуг"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОказУслугE",
+      "modelName": "i-i-s-modul-ucheta-оказ-услуг",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "времяКонсульт",
+          "caption": "Время консульт",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "едВремени",
+          "caption": "Ед времени",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Услуги",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "затрВремя",
+              "caption": "",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Услуги",
+          "name": "услуги",
+          "relatedTo": "i-i-s-modul-ucheta-услуги",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Номер",
+          "lookupValueField": "номер",
+          "relationName": "Договор",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "длительность",
+              "caption": "Длительность",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Договор",
+          "name": "договор",
+          "relatedTo": "i-i-s-modul-ucheta-договор",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

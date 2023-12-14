@@ -1,0 +1,50 @@
+﻿{
+  "applicationCaption": "Modul_ucheta",
+  "applicationTitle": "Modul_ucheta",
+  "items": [
+    {
+      "link": null,
+      "menuName": "modul-ucheta",
+      "caption": "Modul_ucheta",
+      "title": "Modul_ucheta",
+      "children": [
+        {
+          "link": "i-i-s-modul-ucheta-дир-отд-по-раб-с-кл-l",
+          "menuName": null,
+          "caption": "Дир отд по раб с кл",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-modul-ucheta-услуги-l",
+          "menuName": null,
+          "caption": "Услуги",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-modul-ucheta-договор-l",
+          "menuName": null,
+          "caption": "Договор",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-modul-ucheta-расчет-ост-врем-l",
+          "menuName": null,
+          "caption": "Расчет ост врем",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-modul-ucheta-клиент-l",
+          "menuName": null,
+          "caption": "Клиент",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
