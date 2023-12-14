@@ -60,13 +60,14 @@ export let ValidationRules = {
 export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ОказУслугE', 'i-i-s-modul-ucheta-оказ-услуг', {
     дата: attr('Дата', { index: 0 }),
-    времяКонсульт: attr('Время консульт', { index: 1 }),
-    едВремени: attr('Ед времени', { index: 2 }),
+    времяКонсульт: attr('Время консультации', { index: 1, hidden: true }),
+    едВремени: attr('Единица времени', { index: 2 }),
     услуги: belongsTo('i-i-s-modul-ucheta-услуги', 'Услуги', {
-      затрВремя: attr('', { index: 4 })
+      затрВремя: attr('Затраченное время', { index: 4 }),
+      едВремени: attr('Единица времени', { index: 5 })
     }, { index: 3, displayMemberPath: 'наименование' }),
     договор: belongsTo('i-i-s-modul-ucheta-договор', 'Договор', {
-      длительность: attr('Длительность', { index: 6 })
-    }, { index: 5, displayMemberPath: 'номер' })
+      длительность: attr('Длительность', { index: 7 })
+    }, { index: 6, displayMemberPath: 'номер' })
   });
 };

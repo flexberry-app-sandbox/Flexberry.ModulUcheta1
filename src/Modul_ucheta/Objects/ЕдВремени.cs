@@ -50,7 +50,7 @@ namespace IIS.Modul_ucheta
         // *** Start programmer edit section *** (ЕдВремени.Часы CustomAttributes)
 
         // *** End programmer edit section *** (ЕдВремени.Часы CustomAttributes)
-        [Caption("Часы")]
+        [Caption("Час")]
         Часы,
     }
 }

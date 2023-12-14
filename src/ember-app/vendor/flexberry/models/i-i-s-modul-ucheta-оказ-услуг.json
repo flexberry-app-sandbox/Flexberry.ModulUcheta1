@@ -71,13 +71,13 @@
         },
         {
           "name": "времяКонсульт",
-          "caption": "Время консульт",
-          "hidden": false,
+          "caption": "Время консультации",
+          "hidden": true,
           "index": 1
         },
         {
           "name": "едВремени",
-          "caption": "Ед времени",
+          "caption": "Единица времени",
           "hidden": false,
           "index": 2
         }
@@ -92,9 +92,15 @@
           "attrs": [
             {
               "name": "затрВремя",
-              "caption": "",
+              "caption": "Затраченное время",
               "hidden": false,
               "index": 4
+            },
+            {
+              "name": "едВремени",
+              "caption": "Единица времени",
+              "hidden": false,
+              "index": 5
             }
           ],
           "index": 3,
@@ -115,10 +121,10 @@
               "name": "длительность",
               "caption": "Длительность",
               "hidden": false,
-              "index": 6
+              "index": 7
             }
           ],
-          "index": 5,
+          "index": 6,
           "type": "standard",
           "caption": "Договор",
           "name": "договор",

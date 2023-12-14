@@ -31,12 +31,14 @@ namespace IIS.Modul_ucheta
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ОказУслугE", new string[] {
             "Дата as \'Дата\'",
-            "ВремяКонсульт as \'Время консульт\'",
-            "ЕдВремени as \'Ед времени\'",
+            "ВремяКонсульт as \'Время консультации\'",
+            "ЕдВремени as \'Единица времени\'",
             "Услуги as \'Услуги\'",
-            "Услуги.ЗатрВремя",
+            "Услуги.ЗатрВремя as \'Затраченное время\'",
+            "Услуги.ЕдВремени as \'Единица времени\'",
             "Договор as \'Договор\'",
-            "Договор.Длительность as \'Длительность\'"})]
+            "Договор.Длительность as \'Длительность\'"}, Hidden=new string[] {
+            "ВремяКонсульт"})]
     [MasterViewDefineAttribute("ОказУслугE", "Услуги", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
     [MasterViewDefineAttribute("ОказУслугE", "Договор", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Номер")]
     public class ОказУслуг : ICSSoft.STORMNET.DataObject
